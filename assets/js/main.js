@@ -25,10 +25,12 @@ const minDifficulty = 1;
 const maxDifficulty = 3;
 
 // difficulty level request
-let difficultyLevel = parseInt(prompt('inserisci il livello di difficoltà'));
-while (difficultyLevel < minDifficulty || difficultyLevel > maxDifficulty) {
-    difficultyLevel = parseInt(prompt('inserisci il livello di difficoltà'));
+let difficultyLevel = prompt(`inserisci il livello di difficoltà. numero da ${minDifficulty} e ${maxDifficulty}`);
+while (difficultyLevel < minDifficulty || difficultyLevel > maxDifficulty || difficultyLevel === '') {
+    difficultyLevel = prompt(`inserisci il livello di difficoltà. numero da ${minDifficulty} e ${maxDifficulty}`);
 }
+difficultyLevel = parseInt(difficultyLevel);
+console.log(difficultyLevel);
 
 // area adaptation to the difficulty level
 let area;
@@ -42,3 +44,4 @@ else if (difficultyLevel == minDifficulty + 2) {
     area = 49;
 }
 const index = area;
+console.log(index);
