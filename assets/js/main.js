@@ -54,6 +54,7 @@ for (let i = 1; i <= newGrid; i++) {
     
     const cell = document.createElement('div');
     cell.className = 'grid_cell';
+    cell.innerHTML = `<h1>${i}</h1>`
     
     gridRef.append(cell);
 
