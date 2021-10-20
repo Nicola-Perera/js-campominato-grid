@@ -16,10 +16,29 @@
             si colora di azzurro quando ci si clicca sopra;
         inserisco ogni cella in una griglia quadrata;
 */
+
+// grid area
+const gridMatrix = 100;
+
+// difficulty settings
 const minDifficulty = 1;
 const maxDifficulty = 3;
 
+// difficulty level request
 let difficultyLevel = parseInt(prompt('inserisci il livello di difficoltà'));
 while (difficultyLevel < minDifficulty || difficultyLevel > maxDifficulty) {
     difficultyLevel = parseInt(prompt('inserisci il livello di difficoltà'));
 }
+
+// area adaptation to the difficulty level
+let area;
+if (difficultyLevel == minDifficulty) {
+    area = gridMatrix;
+}
+else if (difficultyLevel == minDifficulty + 1) {
+    area = 91;
+}
+else if (difficultyLevel == minDifficulty + 2) {
+    area = 49;
+}
+const index = area;
