@@ -48,12 +48,18 @@ console.log(newGrid);
 
 const gridRef = document.getElementById('grid');
 
+// loop to add cells to grid
 for (let i = 1; i <= newGrid; i++) {
     
     const cell = document.createElement('div');
     cell.className = 'grid_cell';
     
     gridRef.append(cell);
-    
+
+    // function to change bg color on clickß
+    cell.addEventListener('click', function () {
+        this.style.backgroundColor = 'green';
+    })
+
 }
 
