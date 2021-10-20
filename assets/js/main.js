@@ -43,5 +43,17 @@ else if (difficultyLevel == minDifficulty + 1) {
 else if (difficultyLevel == minDifficulty + 2) {
     area = 49;
 }
-const index = area;
-console.log(index);
+const newGrid = area;
+console.log(newGrid);
+
+const gridRef = document.getElementById('grid');
+
+for (let i = 1; i <= newGrid; i++) {
+    const cell = document.createElement('div');
+    const cellElement = `<div class="cell"></div>`;
+    cell.innerHTML = cellElement;
+    console.log(cell);
+
+    gridRef.append(cell);
+}
+
