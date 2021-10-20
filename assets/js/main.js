@@ -38,7 +38,7 @@ if (difficultyLevel == minDifficulty) {
     area = gridMatrix;
 }
 else if (difficultyLevel == minDifficulty + 1) {
-    area = 91;
+    area = 81;
 }
 else if (difficultyLevel == minDifficulty + 2) {
     area = 49;
@@ -47,6 +47,7 @@ const newGrid = area;
 console.log(newGrid);
 
 const gridRef = document.getElementById('grid');
+gridRef.className = `level_${difficultyLevel}`;
 
 // loop to add cells to grid
 for (let i = 1; i <= newGrid; i++) {
