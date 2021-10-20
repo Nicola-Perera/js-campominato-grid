@@ -52,6 +52,9 @@ for (let i = 1; i <= newGrid; i++) {
     const cell = document.createElement('div');
     const cellElement = `<div class="cell"></div>`;
     cell.innerHTML = cellElement;
+    const cellArea = Math.sqrt(newGrid);
+    cell.style.width = 1 / Math.sqrt;
+    cell.style.heigth = 1 / cellArea;
     console.log(cell);
 
     gridRef.append(cell);

@@ -13,13 +13,14 @@
     flex-wrap: wrap;
 }
 #grid > div {
-    margin: 0 .2rem;
-    width: calc(100% / sqrt())
-    height: 30px;
+    padding: 1rem;
+    width: 60px;
+    height: 60px;
     background-color: aqua;
 }
 
 .cell {
     width: 100%;
     height: 100%;
+    background-color: white;
 }
