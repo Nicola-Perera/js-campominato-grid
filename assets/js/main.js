@@ -10,9 +10,16 @@
 
 /*
     STEPS:
-        chiedo all'utente di inserire un numero che indichi il livello di difficoltà al quale vuole giocare;
-        uso il numero inserito dall'utente come indice per un ciclo for che crea una cella:
+        chiedo all'utente di inserire un numero da 1 a 3 che indichi il livello di difficoltà al quale vuole giocare;
+        uso il numero inserito dall'utente per creare un indice per un ciclo for che crea una cella:
             numerata in base all'indice in cui si trova il ciclo;
             si colora di azzurro quando ci si clicca sopra;
         inserisco ogni cella in una griglia quadrata;
 */
+const minDifficulty = 1;
+const maxDifficulty = 3;
+
+let difficultyLevel = parseInt(prompt('inserisci il livello di difficoltà'));
+while (difficultyLevel < minDifficulty || difficultyLevel > maxDifficulty) {
+    difficultyLevel = parseInt(prompt('inserisci il livello di difficoltà'));
+}
